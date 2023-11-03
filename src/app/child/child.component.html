@@ -1,0 +1,27 @@
+<h2>Child Component</h2>
+
+<br />
+
+<h3>
+  Name is <b>{{ objdata.name }}</b> and Mark is {{ objdata.mark }}
+</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mark</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of listarray">
+    <td>{{ item.name }}</td>
+    <td>{{ item.mark }}</td>
+  </tbody>
+</table>
+
+<br />
+
+<input class="form-control" #name />
+<a class="btn btn-primary" href="#" (click)="dataupdateevent.emit(name.value)"
+  >Click</a
+>
